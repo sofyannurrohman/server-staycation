@@ -2,12 +2,13 @@ var seeder = require('mongoose-seed');
 var mongoose = require('mongoose');
 
 // Connect to MongoDB via Mongoose
-seeder.connect('mongodb://127.0.0.1:27017/db_staycation', {
+seeder.connect('mongodb://sofyannr:bwamern@cluster0-shard-00-00.lazta.mongodb.net:27017,cluster0-shard-00-01.lazta.mongodb.net:27017,cluster0-shard-00-02.lazta.mongodb.net:27017/db_staycation?ssl=true&replicaSet=atlas-71itc1-shard-0&authSource=admin&retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: true,
   useUnifiedTopology: true
 }, function () {
+
 
   // Load Mongoose models
   seeder.loadModels([
